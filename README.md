@@ -7,7 +7,11 @@
 #### [Principal Components Analysis](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/1_Dimensionality_Reduction/Principal%20Components%20Analysis(PCA).ipynb)(PCA)
 #### [t-distributed Stochastic Neighbor Embedding](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/1_Dimensionality_Reduction/t-SNE(t-distributed%20Stochastic%20Neighbor%20Embedding).ipynb)(t-SNE)
 ## 2. 커널 기반 학습 (Kernel-based Learning)
-#### tbc..
+#### [Support Vector Machine](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/2_Kernel-base_Learning/support%20vector%20machine(SVM).ipynb)(SVM)
+#### [kernel-PCA](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/2_Kernel-base_Learning/kernerl_PCA(KPCA).ipynb)(K-PCA)(SVM)
+#### [SVM vs Soft Margin SVM, C값 실험](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/2_Kernel-base_Learning/SVM(hard%20margin)%20vs%20Soft%20SVM.R)
+
+
 ## 3. 이상치 탐지 (Anomlay Dectection)
 #### tbc..
 ## 4. 앙상블 학습 (Ensemble Learning)
