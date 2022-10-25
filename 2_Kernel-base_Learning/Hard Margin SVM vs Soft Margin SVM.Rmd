@@ -4,9 +4,6 @@ author: "Changhyun Kim"
 date: "2022-10-25"
 output: github_document
 ---
-```{r, include=FALSE}
-options(tinytex.verbose = T)
-```
 ### 1. SVM에서 Soft and Hard Margin이란?
 
 기본적으로 SVM은 선형으로 분리(Linearly Separable)된다고 가정한다.
