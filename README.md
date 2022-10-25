@@ -9,7 +9,7 @@
 ## 2. 커널 기반 학습 (Kernel-based Learning)
 #### [Support Vector Machine](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/2_Kernel-base_Learning/support%20vector%20machine(SVM).ipynb)(SVM)
 #### [kernel-PCA](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/2_Kernel-base_Learning/kernerl_PCA(KPCA).ipynb)(K-PCA)(SVM)
-#### [SVM vs Soft Margin SVM, C값 실험](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/2_Kernel-base_Learning/SVM(hard%20margin)%20vs%20Soft%20SVM.R)
+#### Bonus [Hard Margin SVM vs Soft Margin SVM](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/1_Dimensionality_Reduction/Principal%20Components%20Analysis(PCA).ipynb)
 
 
 ## 3. 이상치 탐지 (Anomlay Dectection)
