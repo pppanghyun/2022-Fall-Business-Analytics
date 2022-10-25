@@ -54,7 +54,7 @@ Soft Margin SVM에서 $a_i$가 $c$ 이하가 된다는 조건 이외에 두 식�
 이런 경우 수식 상 Hard Margin과 Soft Margin SVM이 완벽히 같아짐을 알 수
 있다.
 
-그리고 만약 $c$가 매우 작아지면(0) error($\epsilon_i$)의 영향이 매우
+고 만약 $c$가 매우 작아지면(0) error($\epsilon_i$)의 영향이 매우
 작아지기 때문에 모든 error를 허용할 것이라고 예상할 수 있다.
 
 (primal은 minimize 문제이기 때문에 $+C$가 0이되면 error의 영향이
@@ -65,7 +65,7 @@ $\infty$로 커지면 정말 Hard Margin SVM과 같아지는지 확인하고, $c
 작은 경우의 결과도 확인해 볼 예정이다.
 
 1.  Linearly Saparable한 데이터를 생성한다.
-2.  Soft Margin SVM의 $C$ 값이 아주 큰 경우($\infty$)를 설정하고
+2.  Soft Margin SVM의 $C$ 값이 아주 큰 경우($\infinity$)를 설정하고
     데이터를 분리한다.
 3.  Soft Margin이지만 $C$가 아주 크게 되면 이론상 Hard Margin과
     같아짐으로 데이터를 선형분리 할 수 있다.
@@ -437,7 +437,7 @@ model_smallc$coefs
 
 ### 결론
 
-1.  Soft Margin SVM에서 $c$가 $\infty$가 되면 Hard Margin SVM(SVM)과
+1.  Soft Margin SVM에서 $c$가 $\infinity$가 되면 Hard Margin SVM(SVM)과
     같다.
 2.  Soft Margin SVM에서 $c$가 매우 작아지면 최적화 과정에서 error를
     고려하지 않기 때문에 가능하지 않다 (의미없다)
