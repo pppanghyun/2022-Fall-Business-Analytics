@@ -32,7 +32,7 @@ Soft Margin SVM 모델의 랑그랑지안 Primal 식과 Dual 식은 아래와 �
 
 ![](image/softmarginsvm.PNG){width="50%," fig.align="center"}
 
-해당 식에는 위(Hard Margin)에는 식에는 없는 $C$ 가 존재하는데, 이는 뒤에 **error(**$\epsilon_i$)를 얼마나 식에 반영할지 정하는 하이퍼 파라미터이다.
+해당 식에는 위(Hard Margin)에는 식에는 없는 $C$ 가 존재하는데, 이는 뒤에 error($\epsilon_i$)를 얼마나 식에 반영할지 정하는 하이퍼 파라미터이다.
 
 그런데, Hard Margin SVM과 Soft Margin SVM의 Dual식의 제약조건을 보면,
 
@@ -42,7 +42,7 @@ Soft Margin SVM에서 $a_i$가 $c$ 이하가 된다는 조건 이외에 두 식�
 
 이런 경우 수식 상 Hard Margin과 Soft Margin SVM이 완벽히 같아짐을 알 수 있다.
 
-그리고 만약 $c$가 매우 작아지면(0) **error(epsilon)**의 영향이 매우 작아지기 때문에 모든 error를 허용할 것이라고 예상할 수 있다.
+그리고 만약 $c$가 매우 작아지면(0) error($\epsilon_i$)의 영향이 매우 작아지기 때문에 모든 error를 허용할 것이라고 예상할 수 있다.
 
 (primal은 minimize 문제이기 때문에 $+C$가 0이되면 error의 영향이 무의미해짐 )
 
