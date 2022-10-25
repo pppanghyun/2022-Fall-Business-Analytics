@@ -8,8 +8,8 @@
 #### [t-distributed Stochastic Neighbor Embedding](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/1_Dimensionality_Reduction/t-SNE(t-distributed%20Stochastic%20Neighbor%20Embedding).ipynb)(t-SNE)
 ## 2. 커널 기반 학습 (Kernel-based Learning)
 #### [Support Vector Machine](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/2_Kernel-base_Learning/support%20vector%20machine(SVM).ipynb)(SVM)
-#### [kernel-PCA](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/2_Kernel-base_Learning/kernerl_PCA(KPCA).ipynb)(K-PCA)(SVM)
-#### Bonus [Hard Margin SVM vs Soft Margin SVM](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/1_Dimensionality_Reduction/Principal%20Components%20Analysis(PCA).ipynb)
+#### [kernel-PCA](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/2_Kernel-base_Learning/kernerl_PCA(KPCA).ipynb)(k-PCA)
+#### [Hard Margin SVM vs Soft Margin SVM](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/2_Kernel-base_Learning/Hard-Margin-SVM-vs-Soft-Margin-SVM.md) (Soft Margin SVM에서 C 값에 따른 모델 비교)
 
 
 ## 3. 이상치 탐지 (Anomlay Dectection)
