@@ -1,5 +1,5 @@
-SVM(Hard Margin) vs Soft Margin SVM
-================
+# SVM(Hard Margin) vs Soft Margin SVM
+
 Changhyun Kim
 2022-10-25
 
@@ -75,14 +75,14 @@ $\infty$로 커지면 정말 Hard Margin SVM과 같아지는지 확인하고, $c
 
 ### Linearly Saparable한 데이터를 생성한다.
 
-``` r
+```r
 library(MASS)
 library(e1071)
 ```
 
-``` r
+```r
 n1 <- n2 <- 50 # 데이터 50개
-m1 <- c(1.5,1) # 다변수정규분포1 평균 
+m1 <- c(1.5,1) # 다변수정규분포1 평균
 m2 <- c(-2,-2) # 다변수정규분포2 평균
 
 v1 <- v2 <- diag(2) # 0,1 설정
@@ -98,7 +98,7 @@ points(x2[,1],x2[,2],col=3) # x2 data plot
 
 ### 생성된 데이터 확인
 
-``` r
+```r
 # dataframe check
 dat <- data.frame(cbind(rep(c(0,1),each=n1),rbind(x1,x2))) # x1=0, x2=1
 colnames(dat) <- c("y","z1","z2")
@@ -209,53 +209,53 @@ dat
 
 ### Soft Margin SVM의 $C$ 값이 아주 큰 경우($\infty$)를 설정
 
-``` r
+```r
 # Soft Margin with Large C
-model_largec <- svm(as.factor(y)~.,kernel="linear",cost=10e15, data=dat) 
+model_largec <- svm(as.factor(y)~.,kernel="linear",cost=10e15, data=dat)
 summary(model_largec)
 ```
 
-    ## 
+    ##
     ## Call:
     ## svm(formula = as.factor(y) ~ ., data = dat, kernel = "linear", cost = 1e+16)
-    ## 
-    ## 
+    ##
+    ##
     ## Parameters:
-    ##    SVM-Type:  C-classification 
-    ##  SVM-Kernel:  linear 
-    ##        cost:  1e+16 
-    ## 
+    ##    SVM-Type:  C-classification
+    ##  SVM-Kernel:  linear
+    ##        cost:  1e+16
+    ##
     ## Number of Support Vectors:  3
-    ## 
+    ##
     ##  ( 2 1 )
-    ## 
-    ## 
-    ## Number of Classes:  2 
-    ## 
-    ## Levels: 
+    ##
+    ##
+    ## Number of Classes:  2
+    ##
+    ## Levels:
     ##  0 1
 
-``` r
+```r
 predict(model_largec,dat[,-1])
 ```
 
-    ##   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
-    ##   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
-    ##  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40 
-    ##   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
-    ##  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60 
-    ##   0   0   0   0   0   0   0   0   0   0   1   1   1   1   1   1   1   1   1   1 
-    ##  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80 
-    ##   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1 
-    ##  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99 100 
-    ##   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1 
+    ##   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20
+    ##   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+    ##  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40
+    ##   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+    ##  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60
+    ##   0   0   0   0   0   0   0   0   0   0   1   1   1   1   1   1   1   1   1   1
+    ##  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80
+    ##   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
+    ##  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99 100
+    ##   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
     ## Levels: 0 1
 
 ### Soft Margin이지만 $C$가 아주 크게 되면 실제로 Hard Margin과 같아짐을 확인
 
 ### (=선형 분리됨)
 
-``` r
+```r
 plot(model_largec,dat)
 ```
 
@@ -263,8 +263,8 @@ plot(model_largec,dat)
 
 ### 이때의 $w$ 값 확인(Support Vector가 존재함)
 
-``` r
-model_largec$coefs 
+```r
+model_largec$coefs
 ```
 
     ##            [,1]
@@ -274,52 +274,52 @@ model_largec$coefs
 
 ### 추가적으로 $c$가 매우 작은 경우를 설정
 
-``` r
+```r
 model_smallc <- svm(as.factor(y)~.,kernel="linear",cost=10e-15, data=dat) # c가 없는경우(cost=10e-15)으로 큰 경우
 summary(model_smallc)
 ```
 
-    ## 
+    ##
     ## Call:
     ## svm(formula = as.factor(y) ~ ., data = dat, kernel = "linear", cost = 1e-14)
-    ## 
-    ## 
+    ##
+    ##
     ## Parameters:
-    ##    SVM-Type:  C-classification 
-    ##  SVM-Kernel:  linear 
-    ##        cost:  1e-14 
-    ## 
+    ##    SVM-Type:  C-classification
+    ##  SVM-Kernel:  linear
+    ##        cost:  1e-14
+    ##
     ## Number of Support Vectors:  100
-    ## 
+    ##
     ##  ( 50 50 )
-    ## 
-    ## 
-    ## Number of Classes:  2 
-    ## 
-    ## Levels: 
+    ##
+    ##
+    ## Number of Classes:  2
+    ##
+    ## Levels:
     ##  0 1
 
-``` r
+```r
 predict(model_smallc,dat[,-1])
 ```
 
-    ##   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20 
-    ##   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
-    ##  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40 
-    ##   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 
-    ##  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60 
-    ##   0   0   0   0   0   0   0   0   0   0   1   1   1   0   1   1   1   1   1   1 
-    ##  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80 
-    ##   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1 
-    ##  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99 100 
-    ##   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1 
+    ##   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20
+    ##   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+    ##  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40
+    ##   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+    ##  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60
+    ##   0   0   0   0   0   0   0   0   0   0   1   1   1   0   1   1   1   1   1   1
+    ##  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80
+    ##   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
+    ##  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99 100
+    ##   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
     ## Levels: 0 1
 
 ### Soft Margin에서 $C$가 아주 작은 경우 확인
 
 ### (=선형 분리되는 것 처럼 보임)
 
-``` r
+```r
 plot(model_smallc,dat)
 ```
 
@@ -329,7 +329,7 @@ plot(model_smallc,dat)
 
 ### (모든 점이 support vector가 됨 = w가 전부 0 = 의미없음)
 
-``` r
+```r
 model_smallc$coefs
 ```
 
