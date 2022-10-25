@@ -55,7 +55,7 @@ Soft Margin SVM에서 $a_i$가 $c$ 이하가 된다는 조건 이외에 두 식�
 이런 경우 수식 상 Hard Margin과 Soft Margin SVM이 완벽히 같아짐을 알 수
 있다.
 
-그리고 만약 $c$가 매우 작아지면(0) **error(epsilon)**의 영향이 매우
+그리고 만약 $c$가 매우 작아지면(0) **error**의 영향이 매우
 작아지기 때문에 모든 error를 허용할 것이라고 예상할 수 있다.
 
 (primal은 minimize 문제이기 때문에 $+C$가 0이되면 error의 영향이
@@ -208,7 +208,7 @@ dat
     ## 99  1 -1.42689164 -1.759963623
     ## 100 1 -0.69389305 -2.465404495
 
-### Soft Margin SVM의 $C$ 값이 아주 큰 경우($\infinity$)를 설정
+### Soft Margin SVM의 $C$ 값이 아주 큰 경우($\infty$)를 설정
 
 ``` r
 # Soft Margin with Large C
