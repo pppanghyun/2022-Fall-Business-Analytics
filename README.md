@@ -13,7 +13,7 @@
 
 
 ## 3. 이상치 탐지 (Anomlay Dectection)
-#### tbc..
+#### [Isolation Forest](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/3_Anomaly_Detection/isolation_forest.ipynb)
 ## 4. 앙상블 학습 (Ensemble Learning)
 #### tbc..
 ## 5. 준지도 학습 (Semi-supervised Learning)
