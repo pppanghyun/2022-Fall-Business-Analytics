@@ -1,5 +1,3 @@
-
-from random import seed
 from random import randrange
 
 # Split a dataset into k folds
