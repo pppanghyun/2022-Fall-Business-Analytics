@@ -17,4 +17,4 @@
 ## 4. 앙상블 학습 (Ensemble Learning)
 #### [Decision Tree](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/4_Ensemble_Learning/Decision_Tree_Classifier.ipynb)
 ## 5. 준지도 학습 (Semi-supervised Learning)
-#### tbc..
+#### [Temporal Ensembel](https://github.com/pppanghyun/2022-Fall-Business-Analytics/blob/main/5_Semi_Supervise_Learning/Temporal_Ensemble.ipynb)
